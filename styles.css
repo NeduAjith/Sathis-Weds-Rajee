@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fbc2eb, #a18cd1);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+#countdown {
+    font-size: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+.time {
+    text-align: center;
+}
+.number {
+    font-size: 4rem;
+    font-weight: bold;
+}
+.label {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}

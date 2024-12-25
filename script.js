@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const popup = document.getElementById('popup');
     const closeButton = document.querySelector('.close-button');
     const popupButton = document.getElementById('popupButton');
+    const showMapButton = document.getElementById('showMapButton');
+    const closeMapButton = document.getElementById('closeMapButton');
+    const map = document.getElementById('map');
     const surpriseAudio = new Audio('crock_blast.mp3');
 
     // Show the popup when the page loads
@@ -60,10 +63,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
-    // Play sound and trigger confetti when the popup button is clicked
+    // Play sound, play song, trigger confetti, and close popup when the popup button is clicked
     popupButton.addEventListener('click', () => {
         surpriseAudio.play();
+        audio.play().then(() => {
+            console.log('Audio is playing');
+            document.getElementById('playButton').textContent = '🔊';
+        }).catch(error => {
+            console.log('Autoplay was prevented:', error);
+        });
         triggerConfetti();
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 500); // Close the popup after 500 milliseconds
+    });
+
+    // Show the map when the show map button is clicked
+    showMapButton.addEventListener('click', () => {
+        map.style.display = 'block';
+    });
+
+    // Close the map when the close map button is clicked
+    closeMapButton.addEventListener('click', () => {
+        map.style.display = 'none';
     });
 
     // Confetti effect

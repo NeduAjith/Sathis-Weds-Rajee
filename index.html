@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <h1>Countdown To the Big Day!</h1>
     <div id="countdown">
         <div class="time">
@@ -26,6 +27,16 @@
             <div class="label">Seconds</div>
         </div>
     </div>
+    <button id="playButton">🔊</button>
+    <div id="location">
+        <h2>Marriage Location</h2>
+        <p>123 Wedding Venue, Celebration City, Country</p>
+        <button id="showMapButton">Show Location on Map</button>
+        <div id="map" style="display: none;">
+            <button id="closeMapButton" class="close-button">&times;</button>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3903.1331247038424!2d79.19844697505982!3d11.965283688265202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1735107703305!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
 
     <div id="popup" class="popup">
         <div class="popup-content">
@@ -35,8 +46,6 @@
             <button id="popupButton">Click me for a surprise!</button>
         </div>
     </div>
-
-    <button id="playButton">🔊</button>
 
     <canvas id="confettiCanvas"></canvas>
 

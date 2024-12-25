@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #fbc2eb, #a18cd1);
-    color: #fff;
+    color: #F26B0F; /* Light yellow color */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -13,29 +13,68 @@ body {
     background-image: url('marriage.jpg.jpg'), url('marriage.jpg');
     background-size: cover, cover;
     background-position: center, center;
-
 }
+
+header {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    color: #E7FBB4; /* Light yellow color */
+}
+
+header h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    animation: rainbow 5s infinite;
+    margin-top: 100px; /* Move the text down */
+    color: #0afcf8; /* Light yellow color */
 }
+
 #countdown {
     font-size: 2rem;
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    color: #0ae7c2; /* Light yellow color */
 }
+
 .time {
     text-align: center;
 }
+
 .number {
     font-size: 4rem;
     font-weight: bold;
+    color: #06ec21; /* Light yellow color */
 }
+
 .label {
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    color: hsla(298, 93%, 50%, 0.751); /* Light yellow color */
+}
+
+#location {
+    margin-top: -1rem; /* Move the location section further up */
+    text-align: center;
+    color: #F26B0F; /* Light yellow color */
+}
+
+#location h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #eeb006; /* Light yellow color */
+}
+
+#location p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #8ef312; /* Light yellow color */
 }
 
 @media (max-width: 768px) {
@@ -62,6 +101,7 @@ h1 {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    color: #F26B0F; /* Light yellow color */
 }
 
 .popup-content {
@@ -99,27 +139,16 @@ h1 {
     z-index: 2;
 }
 
-@keyframes rainbow {
-    0% { color: red; }
-    14% { color: orange; }
-    28% { color: yellow; }
-    42% { color: green; }
-    57% { color: blue; }
-    71% { color: indigo; }
-    85% { color: violet; }
-    100% { color: red; }
-}
-
 footer {
     position: absolute;
     bottom: 10px;
     width: 100%;
     text-align: center;
-    color: #fff;
+    color: #E7FBB4; /* Light yellow color */
 }
 
 footer a {
-    color: #fff;
+    color: #E7FBB4; /* Light yellow color */
     text-decoration: none;
     margin: 0 10px;
 }

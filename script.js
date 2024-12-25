@@ -38,3 +38,94 @@ document.getElementById('playButton').addEventListener('click', function() {
         this.textContent = '🔇';
     }
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const popup = document.getElementById('popup');
+    const closeButton = document.querySelector('.close-button');
+    const popupButton = document.getElementById('popupButton');
+    const surpriseAudio = new Audio('crock_blast.mp3');
+
+    // Show the popup when the page loads
+    popup.style.display = 'block';
+
+    // Close the popup when the close button is clicked
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside of the popup content
+    window.addEventListener('click', (event) => {
+        if (event.target == popup) {
+            popup.style.display = 'none';
+        }
+    });
+
+    // Play sound and trigger confetti when the popup button is clicked
+    popupButton.addEventListener('click', () => {
+        surpriseAudio.play();
+        triggerConfetti();
+    });
+
+    // Confetti effect
+    const confettiCanvas = document.getElementById('confettiCanvas');
+    const confettiCtx = confettiCanvas.getContext('2d');
+    confettiCanvas.width = window.innerWidth;
+    confettiCanvas.height = window.innerHeight;
+
+    const confettiColors = ['#FFC107', '#FF5722', '#4CAF50', '#2196F3', '#9C27B0'];
+    const confettiCount = 300;
+    const confetti = [];
+
+    function createConfetti() {
+        for (let i = 0; i < confettiCount; i++) {
+            confetti.push({
+                x: Math.random() * confettiCanvas.width,
+                y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+                r: Math.random() * 6 + 2,
+                d: Math.random() * confettiCount,
+                color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+                tilt: Math.random() * 10 - 10,
+                tiltAngleIncremental: Math.random() * 0.07 + 0.05,
+                tiltAngle: 0
+            });
+        }
+    }
+
+    function drawConfetti() {
+        confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        confetti.forEach((confettiPiece, index) => {
+            confettiCtx.beginPath();
+            confettiCtx.lineWidth = confettiPiece.r / 2;
+            confettiCtx.strokeStyle = confettiPiece.color;
+            confettiCtx.moveTo(confettiPiece.x + confettiPiece.tilt + confettiPiece.r / 4, confettiPiece.y);
+            confettiCtx.lineTo(confettiPiece.x + confettiPiece.tilt, confettiPiece.y + confettiPiece.tilt + confettiPiece.r / 4);
+            confettiCtx.stroke();
+        });
+
+        updateConfetti();
+    }
+
+    function updateConfetti() {
+        confetti.forEach((confettiPiece, index) => {
+            confettiPiece.tiltAngle += confettiPiece.tiltAngleIncremental;
+            confettiPiece.y += (Math.cos(confettiPiece.d) + 3 + confettiPiece.r / 2) / 2;
+            confettiPiece.tilt = Math.sin(confettiPiece.tiltAngle - index / 3) * 15;
+
+            if (confettiPiece.y > confettiCanvas.height) {
+                confettiPiece.x = Math.random() * confettiCanvas.width;
+                confettiPiece.y = -10;
+                confettiPiece.tilt = Math.random() * 10 - 10;
+            }
+        });
+    }
+
+    function animateConfetti() {
+        drawConfetti();
+        requestAnimationFrame(animateConfetti);
+    }
+
+    function triggerConfetti() {
+        createConfetti();
+        animateConfetti();
+    }
+});

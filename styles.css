@@ -10,9 +10,9 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    background-image: url('Screenshot_2.jpg'), url('path/to/boy-photo.jpg');
+    background-image: url('marriage.jpg.jpg'), url('marriage.jpg');
     background-size: cover, cover;
-    background-position: left, right;
+    background-position: center, center;
     background-repeat: no-repeat, no-repeat;
 
 }
@@ -38,6 +38,13 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    body {
+        background-size: contain, contain;
+        background-position: center, center;
+    }
+}
+
+@media (min-width: 769px) {
     body {
         background-size: contain, contain;
         background-position: center, center;

@@ -13,7 +13,6 @@ body {
     background-image: url('marriage.jpg.jpg'), url('marriage.jpg');
     background-size: cover, cover;
     background-position: center, center;
-    background-repeat: no-repeat, no-repeat;
 
 }
 h1 {
@@ -46,7 +45,7 @@ h1 {
 
 @media (min-width: 769px) {
     body {
-        background-size: contain, contain;
+        background-size: cover, contain;
         background-position: center, center;
     }
 }

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif;
     background: linear-gradient(to bottom, #fbc2eb, #a18cd1);
     color: #F26B0F; /* Light yellow color */
     text-align: center;
@@ -24,23 +24,26 @@ header {
 }
 
 header h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 0;
+    font-family: 'Great Vibes', cursive;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
-    margin-top: 100px; /* Move the text down */
+    margin-top: 150px; /* Move the text up */
     color: #0afcf8; /* Light yellow color */
+    font-family: 'Great Vibes', cursive;
 }
 
 #countdown {
-    font-size: 2rem;
+    font-size: 2.5rem;
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
     color: #0ae7c2; /* Light yellow color */
+    font-family: 'Lora', serif;
 }
 
 .time {
@@ -48,33 +51,37 @@ h1 {
 }
 
 .number {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: bold;
     color: #06ec21; /* Light yellow color */
+    font-family: 'Lora', serif;
 }
 
 .label {
     text-transform: uppercase;
     font-size: 1.2rem;
     color: hsla(298, 93%, 50%, 0.751); /* Light yellow color */
+    font-family: 'Lora', serif;
 }
 
 #location {
-    margin-top: -1rem; /* Move the location section further up */
+    margin-top: 1rem; /* Adjusted margin to ensure button visibility */
     text-align: center;
     color: #F26B0F; /* Light yellow color */
 }
 
 #location h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #eeb006; /* Light yellow color */
+    font-family: 'Great Vibes', cursive;
 }
 
 #location p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 0;
     color: #8ef312; /* Light yellow color */
+    font-family: 'Lora', serif;
 }
 
 @media (max-width: 768px) {
@@ -113,6 +120,7 @@ h1 {
     max-width: 500px;
     text-align: center;
     color: #000;
+    font-family: 'Lora', serif;
 }
 
 .close-button {
@@ -145,6 +153,7 @@ footer {
     width: 100%;
     text-align: center;
     color: #E7FBB4; /* Light yellow color */
+    font-family: 'Lora', serif;
 }
 
 footer a {

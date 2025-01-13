@@ -47,12 +47,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const closeMapButton = document.getElementById('closeMapButton');
     const map = document.getElementById('map');
     const surpriseAudio = new Audio('crock_blast.mp3');
+    const locationOverlay = document.getElementById('location');
 
     // Show the popup when the page loads
     popup.style.display = 'block';
 
     // Close the popup when the close button is clicked
-    closeButton.addEventListener('click', () => {
+    closeButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default action
         popup.style.display = 'none';
     });
 
@@ -78,14 +80,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }, 500); // Close the popup after 500 milliseconds
     });
 
-    // Show the map when the show map button is clicked
+    // Toggle the map visibility when the show map button is clicked
     showMapButton.addEventListener('click', () => {
-        map.style.display = 'block';
+        if (locationOverlay.style.display === 'block') {
+            locationOverlay.style.display = 'none';
+        } else {
+            locationOverlay.style.display = 'block';
+        }
     });
 
     // Close the map when the close map button is clicked
-    closeMapButton.addEventListener('click', () => {
-        map.style.display = 'none';
+    closeMapButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default action
+        event.stopPropagation(); // Stop event propagation
+        locationOverlay.style.display = 'none';
     });
 
     // Confetti effect
@@ -150,4 +158,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
         createConfetti();
         animateConfetti();
     }
+
+    const translateButton = document.getElementById('translateButton');
+    const inviteText = document.getElementById('invite-text');
+    const weddingText = document.getElementById('wedding-text');
+    const dateText = document.getElementById('date-text');
+    const venueText = document.getElementById('venue-text');
+    const venueText2 = document.getElementById('venue-text-2');
+    const brideText = document.getElementById('bride-text');
+    const brideText2 = document.getElementById('bride-text-2');
+    const detailsText = document.getElementById('details-text');
+    const venueLocation = document.getElementById('venue-location');
+    const dateLocation = document.getElementById('date-location');
+    const timeLocation = document.getElementById('time-location');
+    const presenceText = document.getElementById('presence-text');
+    const requestText = document.getElementById('request-text');
+
+    translateButton.addEventListener('click', () => {
+        if (translateButton.textContent === 'Translate to English') {
+            inviteText.textContent = '🕊️ A Beautiful Day Where Two Hearts Unite! 🕊️';
+            weddingText.textContent = 'A new chapter begins in the journey of life...';
+            dateText.textContent = 'We warmly invite you to bless the occasion with your love and presence.';
+            venueText.textContent = '🎩 Groom: Sathish';
+            venueText2.textContent = '(A National-Level Gymnastics Coach – An Energetic Achiever!)';
+            brideText.textContent = '👰 Bride: Rajeshwari';
+            brideText2.textContent = '(Our Family’s Beloved Daughter, Full of Grace and Affection!)';
+            detailsText.textContent = '🎯 Wedding Details:';
+            venueLocation.textContent = 'Venue: Thirukoilur';
+            dateLocation.textContent = 'Date: 10-02-2025';
+            timeLocation.textContent = 'Time: [Time]';
+            presenceText.textContent = '🙏 Your Presence Will Make the Event Truly Special!';
+            requestText.textContent = 'We kindly request you to join us and bless the couple with your love and support.';
+            translateButton.textContent = 'Translate to Tamil';
+        } else {
+            inviteText.textContent = '🕊️ இரு இதயங்கள் இணையும் இனிய நாள்! 🕊️';
+            weddingText.textContent = 'வாழ்க்கை பயணத்தில் ஒரு புதிய அத்தியாயம் தொடங்க…';
+            dateText.textContent = 'அன்பும் ஆசீர்வாதமும் நிறைந்த உங்கள் வருகைக்கு ஆதரவாக அழைக்கிறோம்.';
+            venueText.textContent = '🎩 மணமகன்: சதீஷ்';
+            venueText2.textContent = '(தேசிய அளவிலான ஜிம்னாஸ்டிக் பயிற்சியாளர் – சுறுசுறுப்பான சாதனையாளர்!)';
+            brideText.textContent = '👰 மணமகள்: ராஜேஸ்வரி';
+            brideText2.textContent = '(அழகிய சிரிப்பும் பாசமும் நிறைந்த நமது குடும்பத்தின் மகள்!)';
+            detailsText.textContent = '🎯 திருமண நிகழ்ச்சி விவரங்கள்:';
+            venueLocation.textContent = 'இடம்: திருக்கோவிலூர்';
+            dateLocation.textContent = 'தேதி: 10-02-2025';
+            timeLocation.textContent = 'நேரம்: [நேரம்]';
+            presenceText.textContent = '🙏 உங்கள் வருகையால் மட்டுமே நிகழ்ச்சி சிறப்படையும்!';
+            requestText.textContent = 'உங்களின் பாசத்துடன் நிகழ்ச்சிக்கு வந்து நமக்கு ஆசீர்வதிக்குமாறு அன்புடன் அழைக்கிறோம்.';
+            translateButton.textContent = 'Translate to English';
+        }
+    });
 });

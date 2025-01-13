@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>Countdown To the Big Day!</h1>
+    <header>
+        <h2>Countdown To the Big Day!</h2>
+    </header>
     <div id="countdown">
         <div class="time">
             <div class="number" id="days">00</div>
@@ -27,40 +28,41 @@
             <div class="label">Seconds</div>
         </div>
     </div>
-    <button id="playButton">🔊</button>
-    <div id="location">
-        <h2>Marriage Location</h2>
-        <p>123 Wedding Venue, Celebration City, Country</p>
+    <div id="buttons">
+        <button id="playButton">🔊</button>
         <button id="showMapButton">Show Location on Map</button>
-        <div id="map" style="display: none;">
+    </div>
+    <div id="location" class="overlay">
+        <div class="overlay-content">
             <button id="closeMapButton" class="close-button">&times;</button>
             <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3903.1331247038424!2d79.19844697505982!3d11.965283688265202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1735107703305!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-
-    <div id="welcome">
-        <h2>Welcome to Our Wedding</h2>
-        <p>We are delighted to have you join us on this special day.</p>
-    </div>
-
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close-button">&times;</span>
-            <h2>Welcome to Our Wedding Countdown!</h2>
+            <h3>Welcome to Our Wedding Countdown!</h3>
             <p>We are so excited to share this special day with you!</p>
             <button id="popupButton">Click me for a surprise!</button>
         </div>
     </div>
-
     <canvas id="confettiCanvas"></canvas>
-
     <footer>
-        <p>Follow us on social media:</p>
-        <a href="https://facebook.com" target="_blank">Facebook</a> |
-        <a href="https://instagram.com" target="_blank">Instagram</a> |
-        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <button id="translateButton">Translate to English</button>
+        <p id="invite-text">🕊️ இரு இதயங்கள் இணையும் இனிய நாள்! 🕊️</p>
+        <p id="wedding-text">வாழ்க்கை பயணத்தில் ஒரு புதிய அத்தியாயம் தொடங்க…</p>
+        <p id="date-text">அன்பும் ஆசீர்வாதமும் நிறைந்த உங்கள் வருகைக்கு ஆதரவாக அழைக்கிறோம்.</p>
+        <p id="venue-text">🎩 மணமகன்: சதீஷ்</p>
+        <p id="venue-text-2">(தேசிய அளவிலான ஜிம்னாஸ்டிக் பயிற்சியாளர் – சுறுசுறுப்பான சாதனையாளர்!)</p>
+        <p id="bride-text">👰 மணமகள்: ராஜேஸ்வரி</p>
+        <p id="bride-text-2">(அழகிய சிரிப்பும் பாசமும் நிறைந்த நமது குடும்பத்தின் மகள்!)</p>
+        <p id="details-text">🎯 திருமண நிகழ்ச்சி விவரங்கள்:</p>
+        <p id="venue-location">இடம்: திருக்கோவிலூர்</p>
+        <p id="date-location">தேதி: 10-02-2025</p>
+        <p id="time-location">நேரம்: [நேரம்]</p>
+        <p id="presence-text">🙏 உங்கள் வருகையால் மட்டுமே நிகழ்ச்சி சிறப்படையும்!</p>
+        <p id="request-text">உங்களின் பாசத்துடன் நிகழ்ச்சிக்கு வந்து நமக்கு ஆசீர்வதிக்குமாறு அன்புடன் அழைக்கிறோம்.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

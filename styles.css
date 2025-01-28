@@ -195,14 +195,11 @@ footer {
 }
 
 footer p {
-    background: linear-gradient(to right, rgba(99, 182, 197, 0.909), #680334); /* Gradient for double color effect */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: colorChange 10s infinite;
+    color: rgb(248, 60, 8); /* Full black color */
 }
 
 footer a {
-    color: #ff4081; /* Trendy pink color */
+    color: #4be518; /* Trendy pink color */
     text-decoration: none;
     margin: 0 10px;
 }

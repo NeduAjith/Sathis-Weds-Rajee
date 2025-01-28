@@ -192,14 +192,20 @@ footer {
     font-family: 'Lora', serif;
     line-height: 1.5; /* Adjusted line spacing */
     padding: 20px; /* Added padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
 }
 
 footer p {
-    color: rgb(248, 60, 8); /* Full black color */
+    color: black; /* Full black color */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
+    display: inline-block; /* Ensure background only covers text */
+    padding: 5px; /* Add padding around text */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin: 5px 0; /* Add margin to separate lines */
 }
 
 footer a {
-    color: #4be518; /* Trendy pink color */
+    color: #ff4081; /* Trendy pink color */
     text-decoration: none;
     margin: 0 10px;
 }

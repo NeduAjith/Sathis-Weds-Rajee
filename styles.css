@@ -126,6 +126,11 @@ h1 {
         background-size: contain, contain;
         background-position: center, center;
     }
+
+    footer p {
+        white-space: normal; /* Allow text to wrap normally */
+        word-break: break-word; /* Break long words to prevent overflow */
+    }
 }
 
 @media (min-width: 769px) {
@@ -204,7 +209,7 @@ footer p {
     padding: 5px; /* Add padding around text */
     border-radius: 5px; /* Optional: Add rounded corners */
     margin: 5px 0; /* Add margin to separate lines */
-    line-height: 0.5; /* Ensure proper line spacing */
+    line-height: 1.5; /* Ensure proper line spacing */
 }
 
 footer a {

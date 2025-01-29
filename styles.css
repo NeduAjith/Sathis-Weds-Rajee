@@ -187,12 +187,12 @@ h1 {
 
 footer {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     width: 100%;
     text-align: center;
     font-weight: bold;
     font-family: 'Lora', serif;
-    line-height: 0.5; /* Adjusted line spacing */
+    line-height: 1.5; /* Adjusted line spacing */
     padding: 20px; /* Added padding */
     background-color: rgba(255, 255, 255, 0.8); /* Light background */
 }
@@ -204,6 +204,7 @@ footer p {
     padding: 5px; /* Add padding around text */
     border-radius: 5px; /* Optional: Add rounded corners */
     margin: 5px 0; /* Add margin to separate lines */
+    line-height: 0.5; /* Ensure proper line spacing */
 }
 
 footer a {

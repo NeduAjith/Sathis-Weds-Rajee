@@ -264,3 +264,18 @@ footer a:hover {
     font-size: 1.0em; /* Adjust the size as needed */
     color: initial; /* Ensure the natural color is used */
 }
+
+.button {
+    background-color: #ff4081; /* Trendy pink color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e03570; /* Darker pink color for hover effect */
+}

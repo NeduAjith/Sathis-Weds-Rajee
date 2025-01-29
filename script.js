@@ -80,13 +80,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }, 500); // Close the popup after 500 milliseconds
     });
 
-    // Toggle the map visibility when the show map button is clicked
+    // Redirect to Google Maps with directions when the show map button is clicked
     showMapButton.addEventListener('click', () => {
-        if (locationOverlay.style.display === 'block') {
-            locationOverlay.style.display = 'none';
-        } else {
-            locationOverlay.style.display = 'block';
-        }
+        const destination = 'Thirukoilur';
+        window.location.href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
     });
 
     // Close the map when the close map button is clicked

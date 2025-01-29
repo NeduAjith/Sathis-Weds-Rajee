@@ -198,7 +198,7 @@ footer {
     font-weight: bold;
     font-family: 'Lora', serif;
     line-height: 1.5; /* Adjusted line spacing */
-    padding: 20px; /* Added padding */
+    padding: 5px 5px; /* Reduced top and bottom padding */
     background-color: rgba(255, 255, 255, 0.8); /* Light background */
 }
 
@@ -209,7 +209,7 @@ footer p {
     padding: 5px; /* Add padding around text */
     border-radius: 5px; /* Optional: Add rounded corners */
     margin: 5px 0; /* Add margin to separate lines */
-    line-height: 1.5; /* Ensure proper line spacing */
+    line-height: 1; /* Ensure proper line spacing */
 }
 
 footer a {

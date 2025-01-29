@@ -17,7 +17,7 @@ body {
 
 header {
     position: absolute;
-    top: 10px;
+    top: 5px;
     width: 100%;
     text-align: center;
     color: #f505e5; /* Trendy pink color */
@@ -33,7 +33,7 @@ header h2 {
 h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    margin-top: 150px; /* Move the text up */
+    margin-top: 100px; /* Move the text up */
     color: #f808d0; /* Trendy pink color */
     font-family: 'Great Vibes', cursive;
     padding: 10px;
@@ -47,6 +47,8 @@ h1 {
     color: #ff4081; /* Trendy pink color */
     font-family: 'Lora', serif;
     padding: 10px;
+    position: absolute;
+    top: 60px; /* Position the countdown below the header */
 }
 
 .time {
@@ -190,7 +192,7 @@ footer {
     text-align: center;
     font-weight: bold;
     font-family: 'Lora', serif;
-    line-height: 1.5; /* Adjusted line spacing */
+    line-height: 0.5; /* Adjusted line spacing */
     padding: 20px; /* Added padding */
     background-color: rgba(255, 255, 255, 0.8); /* Light background */
 }
@@ -226,7 +228,8 @@ footer a:hover {
     gap: 1rem;
     margin-top: 1rem;
     z-index: 3; /* Ensure buttons are on top */
-    position: relative;
+    position: absolute;
+    top: 170px; /* Position the buttons below the countdown */
 }
 
 .overlay {

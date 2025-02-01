@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const map = document.getElementById('map');
     const surpriseAudio = new Audio('crock_blast.mp3');
     const locationOverlay = document.getElementById('location');
+    const invitationOverlay = document.getElementById('invitation');
+    const viewInvitationButton = document.getElementById('viewInvitationButton');
+    const closeInvitationButton = document.getElementById('closeInvitationButton');
 
     // Show the popup when the page loads
     popup.style.display = 'block';
@@ -82,7 +85,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Redirect to Google Maps with directions when the show map button is clicked
     showMapButton.addEventListener('click', () => {
-        const destination = 'Thirukoilur';
+        const destination = 'X682+4C5';
         window.location.href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
     });
 
@@ -91,6 +94,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         event.preventDefault(); // Prevent default action
         event.stopPropagation(); // Stop event propagation
         locationOverlay.style.display = 'none';
+    });
+
+    // Show the invitation overlay when the view invitation button is clicked
+    viewInvitationButton.addEventListener('click', () => {
+        invitationOverlay.style.display = 'block';
+    });
+
+    // Close the invitation overlay when the close button is clicked
+    closeInvitationButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default action
+        event.stopPropagation(); // Stop event propagation
+        invitationOverlay.style.display = 'none';
     });
 
     // Confetti effect

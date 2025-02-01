@@ -22,7 +22,7 @@ function updateCountdown() {
 
 const interval = setInterval(updateCountdown, 1000);
 
-const audio = new Audio('Manasae_Thanthi_(Tum_Tum) (mp3cut.net).mp3');
+const audio = new Audio('Mangalyam.mp3');
 audio.loop = true;
 
 document.getElementById('playButton').addEventListener('click', function() {

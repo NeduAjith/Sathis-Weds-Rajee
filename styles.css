@@ -154,7 +154,7 @@ h1 {
     position: fixed;
     z-index: 1;
     left: 50%;
-    top: 5%; /* Adjusted to appear more towards the top */
+    top: 0%; /* Adjusted to appear more towards the top */
     transform: translate(-50%, 0); /* Center horizontally */
     width: 80%;
     max-width: 400px;
@@ -243,7 +243,7 @@ footer a:hover {
     margin-top: 1rem;
     z-index: 3; /* Ensure buttons are on top */
     position: absolute;
-    top: 230px; /* Position the buttons below the countdown */
+    top: 200px; /* Position the buttons below the countdown */
 }
 
 .overlay {

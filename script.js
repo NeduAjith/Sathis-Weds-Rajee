@@ -1,4 +1,4 @@
-const targetDate = new Date("February 10, 2025 00:00:00").getTime();
+const targetDate = new Date("February 10, 2025 05:30:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();

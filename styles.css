@@ -217,7 +217,7 @@ footer p {
     padding: 2px; /* Reduced padding around text */
     border-radius: 5px; /* Optional: Add rounded corners */
     margin: 5px 0; /* Add margin to separate lines */
-    line-height: 0.9; /* Ensure proper line spacing */
+    line-height: 1; /* Ensure proper line spacing */
 }
 
 footer a {
